@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+   
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+.navbars {
+    overflow: hidden;
+    background-color: #842DCE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbars a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdowns {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdowns .dropbtns {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbars a:hover, .dropdowns:hover .dropbtns, .dropbtns:focus {
+    background-color: red;
+}
+
+.dropdown-contents {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-contents a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-contents a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+ul.list-inline li
+{
+  display: inline;
+}
+.head
+{
+    color: white;
+      background:linear-gradient(#0B173B,#0404B4,#210B61);
+     height: 300px;
+    }
+  .title
+  {
+    font-size: 100px;
+    text-align: center;
+    padding-top: 50px;
+  } 
+  .question
+  {
+    background-color: #FDD7E4;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-top: 20px;
+    text-align: center;
+  } 
+  .description
+  {
+   background-color: #EBDDE2;
+   text-align: center;
+   width: 400px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 60%;
+   margin-top: 20px;
+  }
+  .description-title
+  {
+   background-color: #FFF5EE;
+   font-size: 30PX;
+   padding: 20PX;
+  }
+ .solution
+ {
+  width: 70%;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color:gray;
+  box-shadow: 2px solid black;
+ }
+ .solution-title
+ {
+ margin-left: auto;
+ margin-right: auto;
+ background-color: #FCDFFF;
+ padding: auto;
+ }
+ .languages
+ {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+ .solution-body
+ {
+  width: 95%;
+  padding:0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  text-align: left;
+ }
+ .solution-footer
+ {
+text-align: center;
+font-size: 30px;
+background-color: #98FF98;
+ }
+
+.people-comment
+{
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.pannel-footer
+{
+  width: auto;
+}
+.panel-body
+{
+  background-color:#5E5A80 ;
+  margin:20px;
+}
+.comment-body
+{
+ background-color:#EBF4FA ;
+ 
+}
+.affix
+{
+  top: 0px;
+  width: 100%;
+  z-index: 9999!important;
+}
+</style>
+</head>
+<body>
+<header class="head">
+    <h1 class="title">code online.com</h1>
+  </header>
+<div class="navbars  navbar-inverse navbar-static-top nav-pills nav-stacked-top" data-spy="affix" data-offset-top="390" role="navigation">
+  <a href="#home">Home</a>
+  
+  <div class="dropdowns">
+    <button class="dropbtns" onclick="myFunction()">Questions
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-contents" id="myDropdowns">
+      <a href="palindrome.html">PALINDROME PROGRAM</a>
+      <a href="fibonnaci.html">FIBONNACI SERIES</a>
+      <a href="factorial.html">FACTORIAL NUMBER</a>
+      <a href="bubble.html">BUBBLE SHORT</a>
+      <a href="array.html">FIND THIRD LARGEST NUMBER IN AN ARRAY</a>
+    </div>
+  </div> 
+ <a href="#">signup</a>
+  <a href="#">signin</a>
+</div>
+
+
+<div class="question row container-fluid">
+    <h1>PAINDRIME SERIES</h1>
+  </div>
+  <div class="description row">
+    <div class="description-title thumbnail">
+      <p>description of question</p>
+    </div>
+    <div class="description-body">
+      <div class="container-fluid">
+        <p>IN mathematics,palindrome number is the number in which if we reverse a number then the reverse-number will match with the number <br></p>
+        <p><strong>121,123321,1234321....</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="solution">
+    <div class="solution-title">
+    <div class="languages">
+      <ul class="list-inline">
+         <li><button class="btn btn-lg btn-success active" id="c">c</button></li>
+         <li><button class="btn btn-lg btn-primary" id="ac">c++</button></li>
+         <li><button class="btn btn-lg btn-info" id="java">java</button></li>
+         <li><button class="btn btn-lg btn-danger" id="python">python</button></li>
+         <li><button class="btn btn-lg btn-warning" id="swift">swift</button></li>
+        </ul>
+    </div>
+    </div>
+    <div class="solution-body form-group">
+      <div class="container-fluid row" id="q1-c">
+        <pre>
+   #include&lt;stdio.h&gt;
+int main()
+{
+  int n,num,b,j=1,pal=0;
+  printf("Enter a number");
+  scanf("%d",&num);
+  n=num;
+  while(n!=0)
+  {
+    b=n%10;
+    n=n/10;
+    pal=pal*10+b;
+    j=j*10;
+  }
+  if(pal==num)
+  {
+  printf("%d is palinoderm",pal);
+    }
+    else
+    {
+      printf("%d is not palindrom",pal);
+  }
+}                               
+        </pre>
+      </div>
+      <div class="container-fluid row" id="q1-ac">
+        <pre>
+           #include&lt;iostream&gt;
+            using namespace std;
+          #include&lt;conio.h&gt;
+
+int main()
+{
+  int n,num,b,j=1,pal=0;
+  cout<<"Enter a number";
+  cin>>num;
+  n=num;
+  while(n!=0)
+  {
+    b=n%10;
+    n=n/10;
+    pal=pal*10+b;
+    j=j*10;
+  }
+  if(pal==num)
+  {
+  cout&lt;&lt;pal&lt;&lt;"is palinoderm";
+    }
+    else
+    {
+     cout&lt;&lt;pal&lt;&lt;"is not palinoderm";
+  }
+}
+         /<pre>
+      </div>
+      <div class="container-fluid row" id="q1-java">
+        <pre>
+          import java.util.Scanner;
+            class Java
+            {
+              public static void main(String[] args){
+               int n,num,b,j=1,pal=0;
+               Scanner sc=new Scanner(System.in);
+ System.out.printf("Enter a number");
+  int num=sc.nextint();
+  n=num;
+  while(n!=0)
+  {
+    b=n%10;
+    n=n/10;
+    pal=pal*10+b;
+    j=j*10;
+  }
+  if(pal==num)
+  {
+  System.out.printf("%d is palinoderm",pal);
+    }
+    else
+    {
+      System.out.printf("%d is not palindrom",pal);
+  }
+               
+              }
+             } 
+        </pre>
+      </div>
+      <div class="container-fluid row" id="q1-python">
+        <pre>
+           num=int(input("Enter a number"))
+n=num
+pal=0
+while n!=0:
+    b=n%10
+    n//=10
+    pal=pal*10+b
+if num==pal:
+    print(f"{num} is a palindrom number")
+else:
+    print(f"{num} is not a palindrom number")        
+      </div>
+      <div class="container-fluid row" id="q1-swift">
+        <pre>
+             content is not available
+        </pre>
+      </div>
+    </div>
+    <div class="solution-footer thumbnail">
+      <p>i thik you got your answer</p>
+       
+    </div>
+  </div>
+  <div class="people-comment">
+     <div class="form-group">
+      <label for="exampleSelect2"  class="form-group" style="text-align: center;font-size: 30px ; ">People comments</label>
+    </div>
+    <div class="panel-body">
+                  <div class="comment-body">
+                            <ul class="comment">
+                                <li class="left clearfix">
+                                    
+                                    <div class="comment-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Jack Sparrow</strong>
+                                            
+                                        </div>
+                                        <p>
+                                             <p>you can also do it without making recursion function like<br>
+                                             sum=a+b;<br>
+                                             a=b;<br>
+                                             b=sum;</p>
+                                               <hr>                                  
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    
+                                    <div class="comment-body clearfix">
+                                        <div class="header">
+                                            
+                                            <strong class="pull-left primary-font">Vin Desel</strong>
+                                        </div>
+                                        <p>
+                                             
+                                             <p class="pull-left primary-font">you can also do it without making recursion function like<br>
+                                             sum=a+b;<br>
+                                             a=b;<br>
+                                             b=sum;</p>
+                                               <hr>                                  
+                                        </p>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="left clearfix">
+                                    
+                                    <div class="comment-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Jack Sparrow</strong>
+                                           
+                                        </div>
+                                        <p>
+                                             <p>you can also do it without making recursion function like<br>
+                                             sum=a+b;<br>
+                                             a=b;<br>
+                                             b=sum;</p>
+                                               <hr>                                  
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    
+                                    <div class="comment-body clearfix">
+                                        <div class="header">
+                                            
+                                            <strong class="pull-left primary-font">Vin Desel</strong>
+                                        </div>
+                                         <p>
+                                             <p class="pull-left primary-font">you can also do it without making recursion function like<br>
+                                             sum=a+b;<br>
+                                             a=b;<br>
+                                             b=sum;</p>
+                                               <hr>                                  
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                       
+                        <!-- /.panel-footer -->
+                    </div>
+                     <div>
+                           
+                                <textarea id="btn-input" type="textarea" class="form-control input-lg" style="width:auto; height: 200px;"" placeholder="Type your message here..."></textarea><br>
+                                
+                                    <button class="btn btn-warning btn-sm" id="btn-comment" >send</button>
+                        </div>
+           </div>
+  
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+
+function myFunction() {
+    document.getElementById("myDropdowns").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtns')) {
+    var myDropdown = document.getElementById("myDropdowns");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+function signup()
+{
+ var signup = document.getElementById("signup");
+ signup.style.display='block'; 
+}
+$(document).ready(function(){
+  alert("hii");
+  $('#q1-c').show();
+  $('#q1-ac').hide();
+  $('#q1-java').hide();
+  $('#q1-python').hide();
+  $('#q1-swift').hide();
+
+  $('#c').click(function(){
+  $('#q1-c').show();
+  $('#q1-ac').hide();
+  $('#q1-java').hide();
+  $('#q1-python').hide();
+  $('#q1-swift').hide();
+    });
+
+  $('#ac').click(function(){
+  $('#q1-c').hide();
+  $('#q1-ac').show();
+  $('#q1-java').hide();
+  $('#q1-python').hide();
+  $('#q1-swift').hide();
+    });
+
+ $('#java').click(function(){
+  $('#q1-c').hide();
+  $('#q1-ac').hide();
+  $('#q1-java').show();
+  $('#q1-python').hide();
+  $('#q1-swift').hide();
+    });
+
+ $('#python').click(function(){
+       $('#q1-c').hide();
+  $('#q1-ac').hide();
+  $('#q1-java').hide();
+  $('#q1-python').show();
+  $('#q1-swift').hide();
+    });
+
+ $('#swift').click(function(){
+       $('#q1-c').hide();
+  $('#q1-ac').hide();
+  $('#q1-java').hide();
+  $('#q1-python').hide();
+  $('#q1-swift').show();
+    });
+ $('#btn-signup').click(function(){
+
+  $('#signup').show();
+ });
+});
+</script>
+</body>
+</html>
